@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My AI Assistant - RAG</title>
+   <style>
+       body {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           background-color: #f4f7f6;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           height: 100vh;
+           color: #333;
+       }
+       .container {
+           text-align: center;
+           background: white;
+           padding: 40px;
+           border-radius: 12px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+           max-width: 600px;
+       }
+       h1 {
+           color: #2c3e50;
+           margin-bottom: 10px;
+       }
+       p {
+           color: #7f8c8d;
+           line-height: 1.6;
+       }
+       .hint {
+           margin-top: 20px;
+           font-size: 0.9em;
+           background: #e8f4f8;
+           padding: 10px;
+           border-left: 4px solid #3498db;
+           border-radius: 4px;
+       }
+   </style></head><body>
+   <div class="container">
+       <h1>My AI Document Assistant</h1>
+       <p>Welcome! I am a Mini-RAG assistant powered by Flowise and OpenRouter.</p>
+       <p>I have been trained on a specific document. Click the chat bubble in the bottom right corner of your screen to ask me questions about it!</p>
+      
+       <div class="hint">
+           <strong>Hint:</strong> If I don't know the answer, I will tell you that the information is not present in the uploaded document, preventing hallucinations.
+       </div>
+   </div>
+<script type="module">
+   import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+   Chatbot.init({
+       chatflowid: "a9d24794-55ef-41ed-90be-4273977f1172",
+       apiHost: "https://cloud.flowiseai.com",
+   })
+</script>
+</body>
+</html>
